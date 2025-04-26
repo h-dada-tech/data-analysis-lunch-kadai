@@ -1,0 +1,55 @@
+
+PS C:\Users\hosod\Desktop\samurai> cd .\git_challenge\
+PS C:\Users\hosod\Desktop\samurai\git_challenge> ls
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git init
+Initialized empty Git repository in C:/Users/hosod/Desktop/samurai/git_challenge/.git/
+
+    ディレクトリ: C:\Users\hosod\Desktop\samurai\git_challenge
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d--h--        2025/04/27      1:35                .git
+
+
+PS C:\Users\hosod\Desktop\samurai\git_challenge> echo "Hello, world!" >> hello_world.txt
+PS C:\Users\hosod\Desktop\samurai\git_challenge> ls -Force
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d--h--        2025/04/27      1:35                .git
+-a----        2025/04/27      1:38             32 hello_world.txt
+
+
+PS C:\Users\hosod\Desktop\samurai\git_challenge> cat .\hello_world.txt
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git add .\hello_world.txt
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git status
+On branch main
+No commits yet
+
+
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git commit -m "最初のコミット"
+ create mode 100644 hello_world.txt
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git diff --staged
+PS C:\Users\hosod\Desktop\samurai\git_challenge> cat .\hello_world.txt
+Hello, world!
+こんにちは、世界!
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git status
+On branch main
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git commit -m "2回目のコミット"
+[main c32d5cb] 2回目のコミット
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\hosod\Desktop\samurai\git_challenge> git log --oneline
+c32d5cb (HEAD -> main) 2回目のコミット
+55fe8ba 最初のコミット
